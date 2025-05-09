@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- For Ngrok HTTPS URL -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">720a-103-101-213-67.ngrok-free.app</domain>
+    </domain-config>
+
+    <!-- For local development (if needed) -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain> <!-- Android emulator -->
+        <domain includeSubdomains="true">192.168.1.x</domain> <!-- Your local IP -->
+    </domain-config>
+</network-security-config>
