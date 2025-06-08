@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Dimensions, ScrollView ,StatusBar} from 'react-native';
+import { StyleSheet, Text, View, FlatList, Dimensions, ScrollView ,StatusBar,Image} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -8,6 +8,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const Dashboard = ({ navigation }) => {
+    
     const { width } = Dimensions.get('window');
     const containerWidth = width - 40; // Subtracting padding (20 on each side)
 
@@ -30,7 +31,7 @@ const Dashboard = ({ navigation }) => {
         
         <View style={styles.containerMain}>
         <StatusBar
-            backgroundColor="green" // Android only
+            backgroundColor="blue" // Android only
             barStyle="light-content" // iOS: 'dark-content' | 'light-content' | 'default'
         />
         <SafeAreaView style={styles.safeArea}>
@@ -38,19 +39,27 @@ const Dashboard = ({ navigation }) => {
             contentContainerStyle={styles.scrollContent}
             showsVerticalScrollIndicator={false}
         >
-                    
-                <Text style={styles.headText}>DashBoard</Text>
+            <Text style ={{fontSize:18,}}>Welcome to</Text>   
+            <Text style={styles.headText}>mallConnect</Text>
 
-                <View style={[styles.container, { width: containerWidth }]}>
-                    <Text style={styles.sectionText}>Upcoming Events</Text>
-                </View>
+            <View style={[styles.container, { width: containerWidth }]}>   
+                <Image 
+                    source={require('./img/1.png')}
+                    style={styles.image1}
+                />
+            </View>
 
-                <View style={[styles.container, { width: containerWidth }]}>
-                    <Text style={styles.sectionText}>Points</Text>
-                </View>
+            <View style={[styles.container, { width: containerWidth }]}>
+                <Image
+                    source={require('./img/2.png')}
+                    style={styles.image2}
+                />
+                <Text style={styles.overlayText1}>Your points: 50</Text>
+                <Text style={styles.overlayText2}>Reedeem to get offers</Text>
+            </View>
 
-                <View style={[styles.listContainer,{width:containerWidth}]}>
-                    <Text style={styles.listHeader}>Featured Items</Text>
+            <View style={[styles.listContainer,{width:containerWidth}]}>
+                <Text style={styles.listHeader}>Featured Items</Text>
                     <FlatList
                         data={data}
                         renderItem={renderItem}
@@ -60,11 +69,11 @@ const Dashboard = ({ navigation }) => {
                         contentContainerStyle={styles.flatListContent}
                         
                     />
-                </View>
+            </View>
 
-                <View style={[styles.container, { width: containerWidth }]}>
-                    <Text>Hello</Text>
-                </View>
+            <View style={[styles.container, { width: containerWidth }]}>
+                <Text>Hello</Text>
+            </View>
 
 
 
@@ -89,9 +98,10 @@ const styles = StyleSheet.create({
     },
     headText: {
         fontSize: 35,
-        color: 'black',
-        marginBottom: 50,
+        color: '#8000ff',
+        marginBottom: 30,
         textAlign: 'center',
+        
     },
 
 
@@ -104,11 +114,35 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         
     },
-    sectionText: {
-        fontSize: 30,
-        textAlign: 'center',
-        padding: 20,
+    image1: {
+        height:200,
+        width:380,
+        borderRadius:20,
     },
+    image2:{
+        height:200,
+        width:380,
+        borderRadius:20,
+    },
+    overlayText1:{
+        position: 'absolute',
+        color: 'black', // Choose a color that contrasts with your image
+        fontSize: 24,
+        fontWeight: 'bold',
+        
+        
+    },
+    overlayText2:{
+        position: 'absolute',
+        color: 'black', // Choose a color that contrasts with your image
+        fontSize: 24,
+        top: '20%',
+        
+    },
+
+
+
+
 
 
     listContainer: {
@@ -117,11 +151,11 @@ const styles = StyleSheet.create({
         alignItems:'center',
         height:200,
 
-      },
-      flatListContent: {
+    },
+    flatListContent: {
         paddingHorizontal: 10,
-      },
-      item: {
+    },
+    item: {
         backgroundColor: '#f9c2ff',
         padding: 20,
         marginHorizontal: 8,
@@ -135,8 +169,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.2,
         shadowRadius: 4,
         elevation: 3,
-      },
-      listHeader: {
+    },
+    listHeader: {
         
         
         fontSize: 22,
@@ -144,12 +178,13 @@ const styles = StyleSheet.create({
         
         marginBottom: 10,
         color: '#333',
-      },
+    },
       
-      title: {
+    title: {
         fontSize: 18,
         fontWeight: '500',
-      },
+    },
+    
     
 });
 

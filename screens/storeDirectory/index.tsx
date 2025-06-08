@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     padding: 20,
-    paddingBottom: 40, // Extra padding at the bottom
+    paddingBottom: 80, // Extra padding at the bottom
   },
   title: {
     textAlign: 'center',
