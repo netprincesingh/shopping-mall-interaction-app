@@ -1,0 +1,25 @@
+Pages/ Screens
+--------------
+
+1. onboarding/ Authentication
+	->login/Signup
+	->Guest mode (for quick access)
+
+2. Home/Dashboard
+	->upcoming events
+	->pay through points
+	->feedback
+
+3. mall map and navigation
+	->2D map
+	->Store locator (category, floor)
+
+4. store directory
+	->list of stores(fashion, food, electronics etc)
+	->open/closed Timings
+	->Products catalogue
+5. Deals and offers
+
+
+
+	
