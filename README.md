@@ -11,23 +11,25 @@ It has mainly five parts
 
 Dashboard
 ---------
-![Alt Text](https://github.com/netprincesingh/shopping-mall-interaction-app/blob/main/assets/1.jpg)
+
+<img src="https://github.com/netprincesingh/shopping-mall-interaction-app/blob/main/assets/1.jpg" width="300" height="700" alt="Description">
 
 Map
 ---
 
 Here my idea is to implement bluetooth beacons to locate exact mobile phone location in shopping malls
 
-![Alt Text](https://github.com/netprincesingh/shopping-mall-interaction-app/blob/main/assets/2.jpg)
+<img src="https://github.com/netprincesingh/shopping-mall-interaction-app/blob/main/assets/2.jpg" width="300" height="700" alt="Description">
 
 Store Dir
 ---------
-![Alt Text](https://github.com/netprincesingh/shopping-mall-interaction-app/blob/main/assets/3.jpg)
+
+<img src="https://github.com/netprincesingh/shopping-mall-interaction-app/blob/main/assets/3.jpg" width="300" height="700" alt="Description">
 
 Profile
 -------
-![Alt Text](https://github.com/netprincesingh/shopping-mall-interaction-app/blob/main/assets/5.jpg)
 
+<img src="https://github.com/netprincesingh/shopping-mall-interaction-app/blob/main/assets/5.jpg" width="300" height="700" alt="Description">
 
 
 
